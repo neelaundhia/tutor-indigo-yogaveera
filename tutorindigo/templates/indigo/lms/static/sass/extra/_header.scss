@@ -24,6 +24,9 @@ header.global-header {
             .logo {
                 height: 21px;
                 margin: 0;
+                @include media-breakpoint-up(lg) {
+                    height: 42px;
+                }
             }
         }
         .course-header {
