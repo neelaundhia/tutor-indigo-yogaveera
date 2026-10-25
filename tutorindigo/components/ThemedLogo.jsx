@@ -6,6 +6,13 @@ const ThemedLogo = () => {
     <>
       <style>
         {`
+          #root header .logo-image {
+            height: 1.75rem;
+            width: auto;
+          }
+          #root header.site-header-mobile .logo-image {
+            height: 1.5rem;
+          }
           #root header .logo-image.logo-white {
             display: none;
           }

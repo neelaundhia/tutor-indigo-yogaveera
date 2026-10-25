@@ -55,10 +55,13 @@ const CourseCard = ({
     <>
     <style>
       {`
-        .pgn__card.course-card .pgn__card-wrapper-image-cap,
-        .pgn__card.course-card .pgn__card-image-cap {
-          height: auto;
+        .pgn__card.course-card .pgn__card-wrapper-image-cap {
+          max-height: none;
           aspect-ratio: 16 / 9;
+        }
+        .pgn__card.course-card .pgn__card-image-cap {
+          height: 100%;
+          max-height: none;
         }
       `}
     </style>
