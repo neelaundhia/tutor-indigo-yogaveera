@@ -25,6 +25,20 @@ body {
   }
 }
 
+.logo-header .logo-image {
+    body.indigo-dark-theme & {
+        display: none;
+    }
+
+    &.logo-white {
+        display: none;
+
+        body.indigo-dark-theme & {
+            display: inline-block;
+        }
+    }
+}
+
 header.global-header {
     border: none;
     padding: 0;
