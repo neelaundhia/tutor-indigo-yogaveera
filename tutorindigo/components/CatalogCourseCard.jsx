@@ -52,6 +52,16 @@ const CourseCard = ({
   }, intl) : null;
 
   return (
+    <>
+    <style>
+      {`
+        .pgn__card.course-card .pgn__card-wrapper-image-cap,
+        .pgn__card.course-card .pgn__card-image-cap {
+          height: auto;
+          aspect-ratio: 16 / 9;
+        }
+      `}
+    </style>
     <Card
       className={`course-card d-flex ${isExtraSmall ? 'w-100' : 'course-card-desktop'}`}
       isLoading={isLoading}
@@ -86,5 +96,6 @@ const CourseCard = ({
         })}
       </Card.Footer>
     </Card>
+    </>
   );
 };
