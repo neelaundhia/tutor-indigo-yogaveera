@@ -55,11 +55,13 @@ const CourseCard = ({
     <>
     <style>
       {`
-        .pgn__card.course-card .pgn__card-wrapper-image-cap {
+        /* Must outrank brand-openedx's fixed 162px image height */
+        #root .course-card .pgn__card-wrapper-image-cap {
+          height: auto;
           max-height: none;
           aspect-ratio: 16 / 9;
         }
-        .pgn__card.course-card .pgn__card-image-cap {
+        #root .course-card .pgn__card-image-cap {
           height: 100%;
           max-height: none;
         }

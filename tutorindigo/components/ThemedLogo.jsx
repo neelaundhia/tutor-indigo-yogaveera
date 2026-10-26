@@ -6,12 +6,15 @@ const ThemedLogo = () => {
     <>
       <style>
         {`
-          #root header .logo-image {
-            height: 1.75rem;
+          /* brand-openedx sets a 48px logo height with more specific
+             selectors, including [data-paragon-theme-variant=dark] ones */
+          #root header.site-header-desktop .logo .logo-image {
+            height: 2rem !important;
             width: auto;
           }
-          #root header.site-header-mobile .logo-image {
-            height: 1.5rem;
+          #root header.site-header-mobile .logo .logo-image {
+            height: 1.75rem !important;
+            width: auto;
           }
           #root header .logo-image.logo-white {
             display: none;

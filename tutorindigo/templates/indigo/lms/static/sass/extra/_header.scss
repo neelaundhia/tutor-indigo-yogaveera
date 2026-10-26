@@ -73,6 +73,10 @@ header.global-header {
                 width: auto;
                 margin: 0;
 
+                @include media-breakpoint-up(lg) {
+                    height: 32px;
+                }
+
                 body.indigo-dark-theme & {
                     display: none;
                 }
