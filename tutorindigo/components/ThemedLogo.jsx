@@ -8,7 +8,8 @@ const ThemedLogo = () => {
         {`
           /* brand-openedx sets a 48px logo height with more specific
              selectors, including [data-paragon-theme-variant=dark] ones */
-          #root header.site-header-desktop .logo .logo-image {
+          #root header.site-header-desktop .logo .logo-image,
+          #root header.learning-header .logo .logo-image {
             height: 2rem !important;
             width: auto;
           }
@@ -16,13 +17,22 @@ const ThemedLogo = () => {
             height: 1.75rem !important;
             width: auto;
           }
-          #root header .logo-image.logo-white {
+          /* Both images must share the same display type, otherwise the
+             header layout shifts when the theme changes */
+          #root header .logo {
+            display: flex;
+            align-items: center;
+          }
+          #root header .logo .logo-image {
+            display: block;
+          }
+          #root header .logo .logo-image.logo-white {
             display: none;
           }
-          [data-paragon-theme-variant="dark"] #root header .logo-image {
+          [data-paragon-theme-variant="dark"] #root header .logo .logo-image {
             display: none;
           }
-          [data-paragon-theme-variant="dark"] #root header .logo-white {
+          [data-paragon-theme-variant="dark"] #root header .logo .logo-image.logo-white {
             display: block;
           }
         `}
