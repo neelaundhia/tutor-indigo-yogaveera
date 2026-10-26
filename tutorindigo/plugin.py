@@ -372,6 +372,30 @@ PLUGIN_SLOTS.add_items(
     [
         (
             "catalog",
+            "org.openedx.frontend.catalog.home_page.overlay_html",
+            """
+        {
+            op: PLUGIN_OPERATIONS.Hide,
+            widgetId: 'default_contents',
+        }
+        """,
+        ),
+        (
+            "catalog",
+            "org.openedx.frontend.catalog.home_page.overlay_html",
+            """
+        {
+            op: PLUGIN_OPERATIONS.Insert,
+            widget: {
+                id: 'indigo-catalog-home-overlay',
+                type: DIRECT_PLUGIN,
+                RenderWidget: CatalogHomeOverlay,
+            },
+        },
+        """,
+        ),
+        (
+            "catalog",
             "org.openedx.frontend.catalog.home_page.course_card",
             """
         {
